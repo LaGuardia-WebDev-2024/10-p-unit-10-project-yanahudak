@@ -1,11 +1,11 @@
 var starXPos = [];
 var starYPos = [];
-var star = "⭐️";
+var star = "🌳";
 var starTotal = 100;
 
 var planetXPos = [];
 var planetYPos = [];
-var planet = "🪐";
+var planet = "🐈";
 var planetTotal = 3;
 var planetFound = 0;
 
@@ -42,9 +42,9 @@ var check = function(xClick, yClick){
 }
 
 var display = function(){
-  background(100,100,100);
+  background(133, 187, 101);
 
-  fill(200,200,0);
+  fill(133, 187, 101);
   textSize(20);
 
   for(var i = 0; i < planetXPos.length; i ++){
@@ -61,7 +61,7 @@ var display = function(){
   text("Find The " + planet + "s   |   " + planet + " " + planetFound + "/" + planetTotal, 0, 425);
 
   if(planetFound == planetTotal){
-    fill(0, 200, 200);
+    fill(255, 105, 180);
     textSize(50);
     text("Press 'r' to restart \nthe game", 50, 200);
   }

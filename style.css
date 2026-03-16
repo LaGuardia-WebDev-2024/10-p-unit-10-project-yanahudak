@@ -1,5 +1,5 @@
 body {
-  background-image: url("Sprinkles.jpg");
+  background-image: url("https://t4.ftcdn.net/jpg/04/41/63/91/360_F_441639148_kToerH2LGAMcYAyZb2u31xPyhzE0CqRZ.jpg");
   background-color: hsl(213, 85%, 92%);
   background-blend-mode: overlay;
   text-align: center;
@@ -12,14 +12,6 @@ body {
 html{
   height: 100%;
   width: 100%;
-}
-
-#myCanvas1 {
-  border: 1px solid black;
-  background-image: url("supermarket-interior-shelf_165488-3982.avif");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 #myCanvas2 {
