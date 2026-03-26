@@ -32,19 +32,7 @@ setup = function() {
 
 draw = function(){   
 
-  if(mousePressed){
-    xPositions.push(mouseX);
-    yPositions.push(mouseY);
-  }
-
-  drawFish();
-
-   if(keyPressed){
-    if(key == 'r'){
-      reset();
-    }
-   }
-
+  
   display();
 }
 
