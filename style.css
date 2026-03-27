@@ -14,6 +14,14 @@ html{
   width: 100%;
 }
 
+h1{
+  color: rgb(124, 22, 22);
+}
+
+h3{
+  color: brown;
+}
+
 #myCanvas2 {
   border: 1px solid black;
   border-radius: 30px;
