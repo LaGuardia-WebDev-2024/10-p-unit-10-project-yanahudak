@@ -9,6 +9,21 @@ var planet = "🐈";
 var planetTotal = 3;
 var planetFound = 0;
 
+var move = 1
+var drawFish = function(){
+  for(var i = 0; i < yPositions.length; i++){
+    text("🐟", xPositions[i], yPositions[i]);
+    xPositions[i]+= move;
+
+    if(xPositions[i] > 600){
+      move + -1
+    }
+    if(xPositions[i] < -200){
+      move = 1
+    }
+  }
+};
+
 setup = function() {
    size(600, 450); 
 
@@ -22,6 +37,7 @@ draw = function(){
       reset();
     }
    }
+
 
   display();
 }
