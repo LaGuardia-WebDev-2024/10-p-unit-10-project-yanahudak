@@ -1,13 +1,15 @@
-var starXPos = [];
-var starYPos = [];
-var star = "🌳";
-var starTotal = 100;
+var treeXPos = [];
+var treeYPos = [];
+var tree = "🌳"; // tree emoji
+var treeTotal = 100;
 
-var planetXPos = [];
-var planetYPos = [];
-var planet = "🐈";
-var planetTotal = 3;
-var planetFound = 0;
+var catXPos = [];
+var catYPos = [];
+var cat = "🐈"; // cat emoji
+var catTotal = 3;
+var catFound = 0;
+
+var fish = "🐟"; // fish emoji
 
 var move = 1
 var drawFish = function(){
@@ -48,11 +50,11 @@ mouseClicked = function(){
 }
 
 var check = function(xClick, yClick){
-  for(var i = 0; i < planetXPos.length; i++){
-    if(dist(xClick - 5, yClick - 5, planetXPos[i], planetYPos[i])<15){
-      planetXPos.splice(i, 1);
-      planetYPos.splice(i, 1);
-      planetFound++;
+  for(var i = 0; i < catXPos.length; i++){
+    if(dist(xClick - 5, yClick - 5, catXPos[i], catYPos[i])<15){
+      catXPos.splice(i, 1);
+      catYPos.splice(i, 1);
+      catFound++;
     }
   }
 }
@@ -63,20 +65,20 @@ var display = function(){
   fill(133, 187, 101);
   textSize(20);
 
-  for(var i = 0; i < planetXPos.length; i ++){
-    text(planet, planetXPos[i], planetYPos[i]);
+  for(var i = 0; i < catXPos.length; i ++){
+    text(cat, catXPos[i], catYPos[i]);
   }
 
-  for(var i = 0; i < starXPos.length; i ++){
-    text(star, starXPos[i], starYPos[i]);
+  for(var i = 0; i < treeXPos.length; i ++){
+    text(tree, treeXPos[i], treeYPos[i]);
   }
 
   fill(0,0,0);
   rect(0,400,600,50);
   fill(255,255,255);
-  text("Find The " + planet + "s   |   " + planet + " " + planetFound + "/" + planetTotal, 0, 425);
+  text("Find The " + cat + "s   |   " + cat + " " + catFound + "/" + catTotal, 0, 425);
 
-  if(planetFound == planetTotal){
+  if(catFound == catTotal){
     fill(255, 105, 180);
     textSize(50);
     text("Press 'r' to restart \nthe game", 50, 200);
@@ -84,20 +86,20 @@ var display = function(){
 }
 
 var reset = function(){
-  starXPos = [];
-  starYPos = [];
-  planetXPos = [];
-  planetYPos = [];
-  planetFound = 0;
+  treeXPos = [];
+  treeYPos = [];
+  catXPos = [];
+  catYPos = [];
+  catFound = 0;
 
 
-  for(var i = 0; i < starTotal; i++){
-    starXPos.push(random(0,600));
-    starYPos.push(random(0,400));
+  for(var i = 0; i < treeTotal; i++){
+    treeXPos.push(random(0,600));
+    treeYPos.push(random(0,400));
   }
 
-  for(var i = 0; i < planetTotal; i++){
-    planetXPos.push(random(0,600));
-    planetYPos.push(random(0,400));
+  for(var i = 0; i < catTotal; i++){
+    catXPos.push(random(0,600));
+    catYPos.push(random(0,400));
   }
 }
