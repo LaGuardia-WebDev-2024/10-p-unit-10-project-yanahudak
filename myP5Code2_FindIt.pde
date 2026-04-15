@@ -9,23 +9,6 @@ var cat = "🐈"; // cat emoji
 var catTotal = 3;
 var catFound = 0;
 
-var fish = "🐟"; // fish emoji
-
-var move = 1
-var drawFish = function(){
-  for(var i = 0; i < yPositions.length; i++){
-    text("🐟", xPositions[i], yPositions[i]);
-    xPositions[i]+= move;
-
-    if(xPositions[i] > 600){
-      move + -1
-    }
-    if(xPositions[i] < -200){
-      move = 1
-    }
-  }
-};
-
 setup = function() {
    size(600, 450); 
 
@@ -42,6 +25,39 @@ draw = function(){
 
 
   display();
+
+
+
+//for(start; how long ; change) 
+  for (var x=0; x<400; x+=20){ 
+  }
+
+  for (var i = 55; i < 350 ; i+=20){
+    text('🌷🌷🌷', 50, i);
+  }
+
+
+//While
+x = 0;
+while(x < 400){
+  text("🐕", x, 200);
+  x += 60;
+}
+
+
+//array
+var myMeow = ["meow", "purr", "hiss"];
+var myMeowColor = [color(200, 0 , 0), color(0 , 200, 0), color(0, 0, 200)];
+
+fill(myMeowColor[0]);
+text(myMeow[0], 10, 100);
+
+fill(myMeowColor[1]);
+text(myMeow[1], 10, 150);
+
+fill(myMeowColor[2]);
+text(myMeow[2], 10, 200);
+
 }
 
 
